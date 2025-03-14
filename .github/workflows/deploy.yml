@@ -64,7 +64,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ env.OWNER_LC }}/here_is_paw_carecenter${{ needs.makeTagAndRelease.outputs.tag_name }},
+            ghcr.io/${{ env.OWNER_LC }}/here_is_paw_carecenter:${{ needs.makeTagAndRelease.outputs.tag_name }},
             ghcr.io/${{ env.OWNER_LC }}/here_is_paw_carecenter$:latest
 #  deploy:
 #    runs-on: ubuntu-latest
