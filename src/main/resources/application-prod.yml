@@ -13,6 +13,14 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false # OSIV 설정 끄기
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 services:
   auth:
     url: http://110.165.16.61:8090 # 인증 서비스 URL
