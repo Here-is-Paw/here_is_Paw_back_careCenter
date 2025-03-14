@@ -14,14 +14,6 @@ logging:
   level:
     root: info
     com.ll.hereispaw : debug
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
 services:
   auth:
     url: http://localhost:8090 # 인증 서비스 URL

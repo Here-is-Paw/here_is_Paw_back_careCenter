@@ -1,9 +1,6 @@
 server:
   port: 8105
 spring:
-  output:
-    ansi:
-      enabled: ALWAYS
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -13,14 +10,13 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false # OSIV 설정 끄기
+
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
+        include: health  # 이 부분 추가
+
 services:
   auth:
     url: http://110.165.16.61:8090 # 인증 서비스 URL
@@ -33,4 +29,4 @@ services:
   payment:
     url: http://110.165.16.61:8099 # 결제 서비스 URL
   hospital:
-    url: http://110.165.16.61:8010 # 병원 서비스 URL
+    url: http://110.165.16.61:8105 # 병원 서비스 URL
