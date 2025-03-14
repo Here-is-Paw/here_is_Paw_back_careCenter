@@ -3,7 +3,7 @@ spring:
     ansi:
       enabled: ALWAYS
   profiles:
-    active: dev
+    active: prod
     include: secret
 logging:
   level:
