@@ -4,8 +4,6 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-  profiles:
-    include: secret
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
